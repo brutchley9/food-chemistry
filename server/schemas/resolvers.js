@@ -47,12 +47,21 @@ const resolvers = {
       
             return { token, user };
         },
-        addRecipe: async (parent, { recipeTitle, description, ingredients, instructions }, context) => {
+        addRecipe: async (parent, { recipeTitle, description, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5, ingredient6, ingredient7, ingredient8, ingredient9, ingredient10, instructions }, context) => {
             if (context.user) {
               const recipe = await Recipe.create({
                 recipeTitle,
                 description,
-                ingredients,
+                ingredient1,
+                ingredient2,
+                ingredient3,
+                ingredient4,
+                ingredient5,
+                ingredient6,
+                ingredient7,
+                ingredient8,
+                ingredient9,
+                ingredient10,
                 instructions,
                 recipeAuthor: context.user.username,
               });
