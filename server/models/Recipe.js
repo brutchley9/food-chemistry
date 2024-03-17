@@ -17,7 +17,7 @@ const recipeSchema = new Schema({
     },
     description: {
         type: String,
-        required: false,
+        required: true,
         minlength: 1,
         maxlength: 1000,
     },
@@ -25,7 +25,7 @@ const recipeSchema = new Schema({
         {
             ingredient1: {
                 type: String,
-                required: false,
+                required: true,
                 maxlength: 30,
             },
             ingredient2: {
